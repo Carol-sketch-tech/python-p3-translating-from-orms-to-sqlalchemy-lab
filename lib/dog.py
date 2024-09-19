@@ -1,6 +1,14 @@
 from models import Dog
 
 def create_table(base):
+    sql = '''
+            CREATE TABLE dogs (
+            id INTEGER PRIMARY KEY,
+            name TEXT,
+            breed TEXT,
+            age INTEGER) '''
+    CONN.execute(sql)
+    CONN.commit()
     pass
 
 def save(session, dog):
